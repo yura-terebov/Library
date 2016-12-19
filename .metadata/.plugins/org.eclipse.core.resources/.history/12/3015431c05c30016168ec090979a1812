@@ -1,0 +1,50 @@
+package database;
+
+import java.sql.Connection;
+import java.sql.Driver;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+import com.mysql.fabric.jdbc.FabricMySQLDriver;
+
+public class main {
+	
+	private static final String URL = "jdbc:mysql://localhost:3306/library";
+	private static final String USERNAME = "root";
+	private static final String PASSWORD = "root";
+	
+	public static void main(String[] args) {
+		Connection connection;
+	
+		try {
+			Driver driver = new FabricMySQLDriver();
+			DriverManager.registerDriver(driver);
+			
+//			connection = DriverManager.getConnection(URL, USERNAME, PASSWORD);
+//			if (!connection.isClosed()) {
+//				System.out.println("Соединение с БД устанновлено");
+//			}
+//			connection.close();
+//			if (connection.isClosed()) {
+//				System.out.println("Соединение с БД закрыто");
+//			}
+		} catch (SQLException e) {
+			System.out.println("Неудалось загрузить класс драйвера!");
+		}
+		
+		try {
+			connection = DriverManager.getConnection(URL, USERNAME, PASSWORD);
+			Statement statement = connection.createStatement();
+//			statement.execute("INSERT INTO users (name, author) VALUES('horor', 'Unknow');");
+//			int res = statement.executeUpdate("UPDATE users SET author = 'Karlik' WHERE author = 'Unknow';");
+			ResultSet res = statement.executeQuery("SELECT * FROM users;");
+			System.out.println(res.);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+}

@@ -1,0 +1,17 @@
+package library;
+
+import java.util.HashMap;
+
+//import book.Book;
+
+public class Library {
+	private HashMap<String, String> books = new HashMap<String, String>();
+	
+	public void addBook(String bookName, String author) {
+		books.put(bookName, author);
+	}
+	
+	public void remove(String bookName) {
+		books.remove(bookName);
+	}
+}
