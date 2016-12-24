@@ -1,0 +1,6 @@
+package library;
+
+public class Library {
+	private String INSERT_NEW = "INSERT INTO users (name, author) VALUES(?,?)";
+	private  String SELECT = "select * from users where name = ?";
+}

@@ -1,0 +1,49 @@
+package library;
+
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+import dbworker.DBWorker;
+
+public class Library {
+	private String insert = "INSERT INTO users (name, author) VALUES(?,?)";
+	private String select = "select * from users where name = ?";
+	private String selectAll = "select * from users";
+	
+	private DBWorker worker;
+	private PreparedStatement preparedStatement;
+	private ResultSet resultSet;
+	Statement statement;
+	
+	public Library() throws SQLException {
+		worker = new DBWorker();
+		statement = worker.getConnection().createStatement();
+	}
+	
+	public void allBook() {
+		System.out.println("Our books:");
+		try {
+			resultSet = statement.executeQuery(selectAll);
+			while (resultSet.next()) {
+				System.out.println("    " + "author: " + resultSet.getString("author") + " name: " + resultSet.getString("name"));
+			}
+		} catch (SQLException e) {
+			System.out.println("fail execute");
+		}
+	}
+	
+	public void add() {
+		
+	}
+	
+	public void edit() {
+		
+	}
+	
+	public void remove() {
+		
+	}
+	
+}

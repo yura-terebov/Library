@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="GitCommitMessageComponent">
+		<list key="D:\work\BotsCrew\Library\.git">
+			<item value="false"/>
+			<item value="tereb &lt;tereb@DESKTOP-43801FT&gt;"/>
+			<item value="performed test task."/>
+			<item value="tereb &lt;tereb@DESKTOP-43801FT&gt;"/>
+			<item value="51554af42c3f990a94d88fef131f39058fefca05"/>
+		</list>
+	</section>
+	<section name="org.eclipse.egit.ui.internal.staging.StagingView">
+		<item value="200,200" key="STAGING_SASH_FORM_WEIGHT"/>
+		<item value="false" key="sortItemState"/>
+		<item value="200,200" key="HORIZONTAL_SASH_FORM_WEIGHT"/>
+	</section>
+</section>
